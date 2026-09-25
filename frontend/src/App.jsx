@@ -5,7 +5,8 @@ import {
   Sparkles,
   Target,
   TrendingUp,
-} from 'lucide-react'
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -26,17 +27,22 @@ function App() {
           <a href="#features" className="transition hover:text-white">
             Features
           </a>
+
           <a href="#how-it-works" className="transition hover:text-white">
             How it works
           </a>
+
           <a href="#about" className="transition hover:text-white">
             About
           </a>
         </div>
 
-        <button className="rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold transition hover:bg-white/10">
+        <Link
+          to="/login"
+          className="rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold transition hover:bg-white/10"
+        >
           Sign in
-        </button>
+        </Link>
       </nav>
 
       {/* Hero */}
@@ -67,23 +73,32 @@ function App() {
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <button className="group flex items-center gap-2 rounded-xl bg-indigo-500 px-6 py-3.5 font-semibold shadow-xl shadow-indigo-500/20 transition hover:bg-indigo-400">
+              <Link
+                to="/login"
+                className="group flex items-center gap-2 rounded-xl bg-indigo-500 px-6 py-3.5 font-semibold shadow-xl shadow-indigo-500/20 transition hover:bg-indigo-400"
+              >
                 Analyze my resume
                 <ArrowRight
                   size={18}
                   className="transition-transform group-hover:translate-x-1"
                 />
-              </button>
+              </Link>
 
-              <button className="rounded-xl border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-slate-200 transition hover:bg-white/10">
+              <a
+                href="#features"
+                className="rounded-xl border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-slate-200 transition hover:bg-white/10"
+              >
                 Explore HireLens
-              </button>
+              </a>
             </div>
           </div>
         </section>
 
         {/* Feature preview */}
-        <section id="features" className="border-y border-white/5 bg-slate-900/50">
+        <section
+          id="features"
+          className="border-y border-white/5 bg-slate-900/50"
+        >
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
             <div className="mb-12 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-indigo-400">
@@ -130,7 +145,10 @@ function App() {
         </section>
 
         {/* How it works */}
-        <section id="how-it-works" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <section
+          id="how-it-works"
+          className="mx-auto max-w-7xl px-6 py-24 lg:px-8"
+        >
           <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-indigo-400">
@@ -178,6 +196,7 @@ function App() {
                   <p className="text-sm font-semibold text-indigo-300">
                     Recommended next step
                   </p>
+
                   <p className="mt-1 text-sm text-slate-400">
                     Improve your Docker and React skills for your target role.
                   </p>
@@ -198,9 +217,12 @@ function App() {
               Build your profile. Understand your gaps. Prepare smarter.
             </p>
 
-            <button className="mt-8 rounded-xl bg-white px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-slate-200">
+            <Link
+              to="/login"
+              className="mt-8 inline-flex rounded-xl bg-white px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-slate-200"
+            >
               Get started with HireLens
-            </button>
+            </Link>
           </div>
         </section>
       </main>
@@ -216,7 +238,7 @@ function App() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
 function FeatureCard({ icon, title, description }) {
@@ -230,7 +252,7 @@ function FeatureCard({ icon, title, description }) {
 
       <p className="mt-2 text-sm leading-6 text-slate-400">{description}</p>
     </div>
-  )
+  );
 }
 
 function Step({ number, title }) {
@@ -240,7 +262,7 @@ function Step({ number, title }) {
       <div className="h-px flex-1 bg-white/10" />
       <span className="font-medium text-slate-200">{title}</span>
     </div>
-  )
+  );
 }
 
 function Progress({ label, value }) {
@@ -258,7 +280,7 @@ function Progress({ label, value }) {
         />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

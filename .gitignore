@@ -1,0 +1,45 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Build files
+dist/
+build/
+
+# Logs
+*.log
+
+# Uploaded files
+uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# ML generated files
+*.pkl
+*.joblib
+# Local test files
+backend/test_resume.docx
+backend/test_resume.txt
