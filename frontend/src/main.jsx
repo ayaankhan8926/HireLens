@@ -23,6 +23,7 @@ import Interview from "./pages/Interview";
 import Applications from "./pages/Applications";
 import InterviewHistory from "./pages/InterviewHistory";
 import InterviewReview from "./pages/InterviewReview";
+import Register from "./pages/Register";
 
 import "./index.css";
 
@@ -42,7 +43,10 @@ ReactDOM.createRoot(
           path="/login"
           element={<Login />}
         />
-
+<Route
+  path="/register"
+  element={<Register />}
+/>
         <Route
           path="/dashboard"
           element={<Dashboard />}
